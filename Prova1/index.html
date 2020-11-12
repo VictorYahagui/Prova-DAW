@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+    <title>Prova</title>  
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="Mask/jquery.mask.js"></script>
+    <script src="mask.js"></script>
+  </head>
+  <body>
+    <form name="register" onsubmit="return validation()">
+      <div class="container containerBorder">
+        <div class="textBorder">Prova</div>
+        <div>
+          <label for="Name">Nome:</label>
+          <div>
+            <input type="text" class="form-control defaut" name="Name">
+          </div>
+        </div>
+        <div>
+          <div>
+            <label for="Type" class="typeP">Tipo Pessoa:</label>
+              <div style="display: inline-block;">
+                <div id="showLCpf" style="display: inline;">
+                  <label for="CPF" class="cpf"> CPF: </label>
+                </div>
+                <div id="showLCnpj" style="display: none;">
+                  <label for="CNPJ"> CNJP: </label>
+                </div>
+              </div>
+            <label for="CEP" class="typeCEP"> CEP: </label>
+            <label for="State"> Estado: </label>
+          </div>
+          <div style="display: inline-block;">
+            <input type="radio" class="radio" name="Type" id="checkCpf" value="cpf" checked>
+            <label for="Fisíca">Fisíca </label>
+            <input type="radio" class="radio" name="Type" id="checkCnpj" value="cnpj">
+            <label for="Jurídica">Jurídica </label>
+            <div style="display: inline-block;">
+              <div id="showICpf" style="display: inline;">
+                <input type="text" class="typeCPF-CNPJ defaut" id="cpf" placeholder="___.___.___-__" maxlength="14" name="NCPF" size="27">
+              </div>
+              <div id="showICnpj" style="display: none;">
+                <input type="text" class="typeCPF-CNPJ defaut" id="cnpj" placeholder="__.___.___/____-__"maxlength="18" name="NCNPJ" size="27">
+              </div>
+              </div>
+            <input type="text" class="defaut" placeholder="_____-___" id="cep" maxlength="9" size="15" name="CEP">
+            <select id="State" class="typeState defaut">
+              <option value="MG" selected>MG</option>
+              <option value="SP">SP</option>
+              <option value="RJ">RJ</option>
+              <option value="ES">ES</option>
+            </select>
+            <button type="submit" class="btn btn-success btnPerson">Enviar</button>
+            <button type="reset" class="btn btn-primary btnPerson">Limpar</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
